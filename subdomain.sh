@@ -54,11 +54,11 @@ sudo apt-get install nginx -y
 sudo systemctl restart nginx.service
 
 if $varnaked;
-  then sudo wget --no-check-certificate 'https://raw.githubusercontent.com/yudhynet/wordpress-install/main/php74/config.txt' -O /etc/nginx/sites-enabled/"$var01" && sudo sed -i "s/domain/$var01/g" /etc/nginx/sites-enabled/"$var01";
+  then sudo wget --no-check-certificate 'https://raw.githubusercontent.com/yudhymobi/wordpress-install/main/php74/config.txt' -O /etc/nginx/sites-enabled/"$var01" && sudo sed -i "s/domain/$var01/g" /etc/nginx/sites-enabled/"$var01";
 elif $varwww;
-  then sudo wget --no-check-certificate 'https://raw.githubusercontent.com/yudhynet/wordpress-install/main/php74/config-www.txt' -O /etc/nginx/sites-enabled/"$var01" && sudo sed -i "s/domain/$var011/g" /etc/nginx/sites-enabled/"$var01";
+  then sudo wget --no-check-certificate 'https://raw.githubusercontent.com/yudhymobi/wordpress-install/main/php74/config-www.txt' -O /etc/nginx/sites-enabled/"$var01" && sudo sed -i "s/domain/$var011/g" /etc/nginx/sites-enabled/"$var01";
 else 
-  sudo wget --no-check-certificate 'https://raw.githubusercontent.com/yudhynet/wordpress-install/main/php74/config-non-www.txt' -O /etc/nginx/sites-enabled/"$var01" && sudo sed -i "s/domain/$var01/g" /etc/nginx/sites-enabled/"$var01";
+  sudo wget --no-check-certificate 'https://raw.githubusercontent.com/yudhymobi/wordpress-install/main/php74/config-non-www.txt' -O /etc/nginx/sites-enabled/"$var01" && sudo sed -i "s/domain/$var01/g" /etc/nginx/sites-enabled/"$var01";
 fi
 
 # installing the app 
